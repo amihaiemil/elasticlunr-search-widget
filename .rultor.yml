@@ -10,8 +10,8 @@ install: |-
   sudo apt-get install jq
   npm install
   ./node_modules/.bin/webpack --version
-#decrypt:
-#  deployment.txt: "repo/dcfg/deployment.txt.asc"
+decrypt:
+  deployment.txt: "repo/dcfg/deployment.txt.asc"
 merge:
   script: |-
     NODE_ENV=production ./node_modules/.bin/webpack
