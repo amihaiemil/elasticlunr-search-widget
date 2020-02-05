@@ -18,7 +18,7 @@ TOKEN=$(cat /home/r/deployment.txt)
 SHA_BUILD=$(curl 'https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/js/elasticlunr/elasticlunr-search-widget.min.js' | jq '.sha')
 NEW_BUILD=$(openssl enc -base64 <<< $(cat src/elasticlunr-search-widget.min.js) | awk 'BEGIN{ORS="\\n";} {print}')
 echo "{\"message\": \"deploy new build\", \"sha\": ${SHA_BUILD}, \"content\": \"${NEW_BUILD}\"}" > build.txt;
-curl -H "Authorization: token ${TOKEN}" -X PUT -d @build.txt https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/elasticlunr/elasticlunr-search-widget.min.js
+curl -H "Authorization: token ${TOKEN}" -X PUT -d @build.txt https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/js/elasticlunr/elasticlunr-search-widget.min.js
 
 # deploy the css file elasticlunr-search-widget_light.css
 SHA_CSS_LIGHT=$(curl 'https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/css/elasticlunr/elasticlunr-search-widget_light.css' | jq '.sha')
