@@ -1,1 +1,173 @@
-dummy css file for testing deployment
+/**** COLORS ****
+ Grey Text        #8C8C8C
+ Grey Bolder Text #616161
+ Hover Background EEEEEE
+ Blue             #7EBCDB
+ Border           #979797
+ Page selected    #F3F3F3
+*****************/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+#charles-search {
+    width: 250px;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+}
+
+/**
+ * Display the search widget only on screen width > 450px;
+ */
+/*
+#charles-search {
+    display: none;
+}
+@media only screen and (min-width: 450px) {
+  #charles-search {
+      display: block;
+  }
+}*/
+
+/***********************
+*        INPUT         *
+************************/
+
+#charles-search-wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+#charles-search-input-wrapper {
+    position: relative;
+}
+#charles-search-input-wrapper::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(https://www.amihaiemil.com/images/search.png);
+    position: absolute;
+    top: 32%;
+    left: 5%
+}
+
+#charles-search-field {
+    width: 100%;
+    border: solid #979797 1px;
+    padding: 12px 10px 10px 35px;
+    font-size: 16px;
+    color: #616161;
+
+    -webkit-border-radius: 7px;
+       -moz-border-radius: 7px;
+            border-radius: 7px;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#charles-search-field::-webkit-input-placeholder {
+    font-family: 'Raleway', sans-serif;
+}
+
+#charles-search-field::-moz-placeholder {
+    font-family: 'Raleway', sans-serif;
+}
+
+#charles-search-field:-ms-input-placeholder {
+    font-family: 'Raleway', sans-serif;
+}
+
+#charles-search-field:-moz-placeholder {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/***********************
+*       RESULTS        *
+************************/
+
+#resultsPanel {
+    border: solid #979797 1px;
+    background-color: #FFF;
+
+    position: relative;
+    //top: 40%;
+
+    -webkit-border-radius: 7px;
+       -moz-border-radius: 7px;
+            border-radius: 7px;
+}
+
+.search-result-text em {
+    font-weight: bold;
+}
+
+#resultsPanel .search-result {
+    padding: 5% 5% 5% 5%;
+    overflow: hidden;
+    border-top: solid #979797 1px;
+}
+#resultsPanel .search-result:first-child {
+    padding-top: 25px;
+    border-top: none;
+}
+#resultsPanel .search-result:hover {
+    background-color: #EEEEEE;
+}
+
+#resultsPanel .active-result {
+  background-color: #EEEEEE;
+}
+
+#resultsPanel .search-result a {
+    text-decoration: none;
+}
+
+#resultsPanel .search-result h3 {
+    margin: 0;
+    padding-bottom: 2%;
+    font-size: 100%;
+    letter-spacing: 0.03em;
+    color: #1756a9;
+}
+
+#resultsPanel .search-result .search-result-text {
+    font-size: 14px;
+    line-height: 1.4em;
+    letter-spacing: 0.02em;
+    color: #8C8C8C;
+}
+
+#resultsPanel .search-result .search-result-text b {
+    font-weight: 700;
+}
+
+/***********************
+*        PAGING        *
+************************/
+
+ul.search-pages {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+}
+
+li.search-page {
+    display: inline-block;
+    padding: 10px;
+    border-top:  solid #F3F3F3 1px;
+    border-left: solid #F3F3F3 1px;
+    color: #8C8C8C;
+    cursor: pointer;
+}
+
+li.search-page:hover {
+    background-color: #F3F3F3;
+}
+
+li.search-page.selected {
+    background-color: #F3F3F3;
+}

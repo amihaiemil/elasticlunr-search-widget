@@ -1,0 +1,61 @@
+{
+	"pageNumber": 1,
+	"elementsFound": 30,
+	"nextPage": "http://localhost:8080/test/testsearch2.json",
+	"previousPage": "-",
+	"res": [{
+		"title": "RESULT PAGE 1",
+		"link": "/versicherung/cms/geschaeftskunden/gesundheit/Spezialisten_Krankenversicherung.de.html",
+		"text": " ...alexander.dawid@<b>uniqa.at</b> Landesdirektion Niederösterreich: Gerhar  ...",
+		"category": "Geschäftskunden"
+	}, {
+		"title": "Versandbestätigung Schadenmeldung Haushalt",
+		"link": "/versicherung/cms/kontakt/Versandbestaetigung_Schadenmeldung_Haushalt.de.html",
+		"text": " ...<b>uniqa.at</b>. Wir freuen uns, wenn wir etwas ...",
+		"category": ""
+	}, {
+		"title": "Versandbestätigung Schadenmeldung Kfz",
+		"link": "/versicherung/cms/kontakt/Versandbestaetigung_Schadenmeldung_Kfz.de.html",
+		"text": " ...info@<b>uniqa.at</b>. Wir freuen uns, wenn wir e...",
+		"category": ""
+	}, {
+		"title": "Kontakt",
+		"link": "/versicherung/cms/kontakt/Kontakt.de.html",
+		"text": " ...<b>UNIQA</b> Kontakt <b>UNIQA</b> Österreich ...",
+		"category": ""
+	}, {
+		"title": "Kundenberater",
+		"link": "/versicherung/cms/karriere/kundenberater/Kundenberater.de.html",
+		"text": " ...Karriere als Kundenberater im Außendienst Österreich  ...",
+		"category": ""
+	}, {
+		"title": "Wichtige Informationen und Risikohinweise",
+		"link": "/versicherung/cms/privatkunden/leben_und_risiko/Wichtige_Informationen_und_Risikohinweise.de.html",
+		"text": " ...<b>UNIQA</b> Österreich Versicherungen AG zu übertragen ...",
+		"category": "Privatkunden"
+	}, {
+		"title": "Datenschutz",
+		"link": "/versicherung/cms/ueber_uniqa/kontakt/Datenschutz.de.html",
+		"text": " ...Datenschutzbestimmungen zur Verwendung der <b>UNIQA</b> App. ...",
+		"category": ""
+	}, {
+		"title": "Bewerbung VitalCoach",
+		"link": "/versicherung/cms/karriere/Bewerbung_VitalCoach.de.html",
+		"text": " ...Bewerbung <b>UNIQA</b> VitalCoach Wir möchten unsere Kunden zu einem gesunden und ...",
+		"category": ""
+	}, {
+		"title": "Impressum",
+		"link": "/versicherung/cms/rechtlich/impressum/Impressum.de.html",
+		"text": " ...Impressum Medieninhaber und Herausgeber <b>UNIQA</b> Österreich Versicherungen ...",
+		"category": ""
+	}, {
+		"title": "RESULT PAGE 1 LAST",
+		"link": "/versicherung/cms/betreuer/Rueckruf_anfordern.de.html",
+		"text": " ...E-Mail-Adresse und Telefonnummer) von <b>UNIQA</b> Österreich Versicherungen AG ...",
+		"category": ""
+	}],
+	"pages": [
+    "http://localhost:8080/test/testsearch.json",
+    "http://localhost:8080/test/testsearch2.json",
+    "http://localhost:8080/test/testsearch3.json"]
+}

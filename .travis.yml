@@ -6,7 +6,9 @@ cache:
   - node_modules
 before_install:
 - npm install npm@latest -g
+- npm install webpack@latest -g
 - npm -v
+- webpack --version
 - npm install
 script:
 - NODE_ENV=production webpack

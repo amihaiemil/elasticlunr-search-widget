@@ -1,0 +1,61 @@
+{
+	"pageNumber": 2,
+	"elementsFound": 30,
+	"nextPage": "http://localhost:8080/test/testsearch3.json",
+	"previousPage": "http://localhost:8080/test/testsearch.json",
+	"res": [{
+		"title": "RESULT PAGE 2",
+		"link": "/versicherung/cms/geschaeftskunden/gesundheit/Spezialisten_Krankenversicherung.de.html",
+		"text": " ...alexander.dawid@<b>uniqa.at</b> Landesdirektion Niederösterreich: Gerhard Mach Tel: 02742/894-403 E-Mail: gerhard.mach@<b>uniqa.at</b> Landesdirektion Oberösterreich: Dr. Ewald Kirchmayr Tel: 0732/6905-400 E-Mail: ewald.kirchmayr@<b>uniqa.at</b>  ...",
+		"category": "Geschäftskunden"
+	}, {
+		"title": "Versandbestätigung Schadenmeldung Haushalt",
+		"link": "/versicherung/cms/kontakt/Versandbestaetigung_Schadenmeldung_Haushalt.de.html",
+		"text": " ...<b>uniqa.at</b>. Wir freuen uns, wenn wir etwas für Sie tun können. Freundliche Grüße von Ihrem <b>UNIQA</b> Team Beratung vereinbaren Berater in der ...",
+		"category": ""
+	}, {
+		"title": "Versandbestätigung Schadenmeldung Kfz",
+		"link": "/versicherung/cms/kontakt/Versandbestaetigung_Schadenmeldung_Kfz.de.html",
+		"text": " ...info@<b>uniqa.at</b>. Wir freuen uns, wenn wir etwas für Sie tun können.   Freundliche Grüße von Ihrem <b>UNIQA</b> Team Beratung vereinbaren Berater in ...",
+		"category": ""
+	}, {
+		"title": "Kontakt",
+		"link": "/versicherung/cms/kontakt/Kontakt.de.html",
+		"text": " ...<b>UNIQA</b> Kontakt <b>UNIQA</b> Österreich Versicherungen AG Untere Donaustraße 21 1029 Wien Postadresse: Business Center 607 1000 Wien Unser Kundenservice ist rund um die Uhr für Sie da: Tel.: +43 (0) 50677-670 Fax: +43 (0) 50677-676 E-Mail: i ...",
+		"category": ""
+	}, {
+		"title": "Kundenberater",
+		"link": "/versicherung/cms/karriere/kundenberater/Kundenberater.de.html",
+		"text": " ...Karriere als Kundenberater im Außendienst Starten Sie Ihre Karriere als Kundenberater im Außendienst. <b>UNIQA</b> setzt auf Kundennähe und persönliches Service. Allein in Österreich verfügt <b>UNIQA</b> über ein flächendeckendes Netz von mehr al ...",
+		"category": ""
+	}, {
+		"title": "Wichtige Informationen und Risikohinweise",
+		"link": "/versicherung/cms/privatkunden/leben_und_risiko/Wichtige_Informationen_und_Risikohinweise.de.html",
+		"text": " ...<b>UNIQA</b> Österreich Versicherungen AG zu übertragen. Versicherer Klassische Lebensversicherung: <b>UNIQA</b> Österreich ...Internet: www.uniqa.at, E-Mail: info@<b>uniqa.at</b> Rechtsform: Aktiengesellschaft, Sitz: Wien, FN ...",
+		"category": "Privatkunden"
+	}, {
+		"title": "Datenschutz",
+		"link": "/versicherung/cms/ueber_uniqa/kontakt/Datenschutz.de.html",
+		"text": " ...Datenschutzbestimmungen zur Verwendung der <b>UNIQA</b> App. Inhalt des Popup's (Nicht zu befüllen bei \"Externer Link\") Datenschutzbestimmungen Informationen Zweck der Website der <b>UNIQA</b> Österreich Versicherungen AG (kurz: <b>UNIQA</b>) ist ...",
+		"category": ""
+	}, {
+		"title": "Bewerbung VitalCoach",
+		"link": "/versicherung/cms/karriere/Bewerbung_VitalCoach.de.html",
+		"text": " ...Bewerbung <b>UNIQA</b> VitalCoach Wir möchten unsere Kunden zu einem gesunden und ...bei dieser Gesundheitsvorsorge sind unsere <b>UNIQA</b> VitalCoaches. Im Laufe der Jahre ...unabhängigen Gesundheitsexperten aufgebaut.  Möchten auch Sie gerne m ...",
+		"category": ""
+	}, {
+		"title": "Impressum",
+		"link": "/versicherung/cms/rechtlich/impressum/Impressum.de.html",
+		"text": " ...Impressum Medieninhaber und Herausgeber <b>UNIQA</b> Österreich Versicherungen AG A-1029 Wien ...E-Mail: info@<b>uniqa.at</b> Web: http://www.uniqa.at http://www.uniqagroup.com Gesellschaftsform: Aktiengesellschaft ...Am Medieninhaber als Aktionä ...",
+		"category": ""
+	}, {
+		"title": "RESULT PAGE 2 LAST TWO",
+		"link": "/versicherung/cms/betreuer/Rueckruf_anfordern.de.html",
+		"text": " ...E-Mail-Adresse und Telefonnummer) von <b>UNIQA</b> Österreich Versicherungen AG (<b>UNIQA</b> ...(z.B. Veranstaltungen) und Produkten sowie auch neuen Dienstleistungen durch <b>UNIQA</b> kontaktiert ...50677-670) oder per E-Mail (info@<b>uniqa.at ...",
+		"category": ""
+	}],
+	"pages": [
+    "http://localhost:8080/test/testsearch.json",
+    "http://localhost:8080/test/testsearch2.json",
+    "http://localhost:8080/test/testsearch3.json"]
+}
