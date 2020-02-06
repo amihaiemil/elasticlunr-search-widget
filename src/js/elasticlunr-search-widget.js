@@ -4,10 +4,6 @@ import ReactDOM from "react-dom";
 import Search from "./components/Search";
 var $ = require('jquery');
 
-//TODO deprecated...
-var search = 'https://webapps.amihaiemil.com/charles-rest/api/s/';
-
-var repo = $('script[id=elnr-sw-script]').attr('repo');
 var index = $('script[id=elnr-sw-script]').attr('index');
 var size = $('script[id=elnr-sw-script]').attr('size');
 var placeholder = $('script[id=elnr-sw-script]').attr('placeholder');
@@ -28,8 +24,8 @@ if(index) {
       searchDiv.setAttribute("id", divId);
       document.body.appendChild(searchDiv);
   }
-  ReactDOM.render(//TODO instead of searchUrl, the Search component should work with the given index!
-    <Search searchUrl={search + repo + "?index=0&size=" + size + "&kw="} placeholder={placeholder}/>,
+  ReactDOM.render(
+    <Search index={index} placeholder={placeholder}/>,
     searchDiv
   );
 } else {
