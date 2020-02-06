@@ -16,7 +16,7 @@ export default class Search extends React.Component {
     super();
     this.state = {
       keywords: "",
-      searchResults: {}
+      searchResults: []
     };
   }
 
@@ -34,7 +34,7 @@ export default class Search extends React.Component {
     } else {
        this.setState(
          {
-           searchResults: {}
+           searchResults: []
          }
        );
     }
@@ -45,7 +45,6 @@ export default class Search extends React.Component {
       <div>
         <Input
           placeholder={this.props.placeholder}
-          searchUrl={this.props.searchUrl}
           getSearchResults={this.getSearchResults.bind(this)}
         />
         <Results

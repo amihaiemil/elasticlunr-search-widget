@@ -19,7 +19,7 @@ class Results extends React.Component {
   }
 
   render() {
-    var resArray = this.props.searchResults.results;
+    var resArray = this.props.searchResults;
     var resultsDivs = [];
     if(resArray) {
       for (var i = 0; i < resArray.length; i++) {
@@ -27,9 +27,9 @@ class Results extends React.Component {
           <SearchResult
             id={"search-result-" + i}
             key={"search-result-" + i}
-            link={resArray[i].link}
-            title={resArray[i].title}
-            text={resArray[i].highlight}
+            link={resArray[i].doc.link}
+            title={resArray[i].doc.title}
+            text={resArray[i].doc.highlight}
           />
         );
       }
@@ -46,10 +46,10 @@ class Results extends React.Component {
                 )
               }
           </div>
-          <PageNumbers
-            getSearchResults={this.props.getSearchResults}
-            results={this.props.searchResults} id="paginator" key="paginator"
-          />
+          // <PageNumbers
+          //   getSearchResults={this.props.getSearchResults}
+          //   results={this.props.searchResults} id="paginator" key="paginator"
+          // />
         </div>
           : null
     );
