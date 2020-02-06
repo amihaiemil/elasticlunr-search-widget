@@ -3,8 +3,6 @@ import React from "react";
 import Input from "./Input";
 import Results from "./Results";
 
-var $ = require('jquery');
-
 /**
  * Parent component wrapping all the react search box components.
  *
@@ -23,42 +21,16 @@ export default class Search extends React.Component {
   }
 
   /**
-   * Make an ajax call to get the search results json object from the backend.
+   * Search the ElasticLunr index.
    * @param query - String; Search query.
-   * @param prependUrl - Boolean; Should the searchUrl be prepended or not?
    */
-  getSearchResults(query, prependUrl) {
+  getSearchResults(query) {
     if(query.length >= 3) {
-      $.support.cors = true;
-      $.ajax({
-		    type : "GET",
-		    url : prependUrl ? this.props.searchUrl + query : query,
-		    headers : {
-		  	  Accept : "application/json; charset=utf-8"
-		    },
-		    success : function(results, status) {
-			    if(status == "success") {
-            this.setState(
-              {
-                searchResults: results
-              }
-            );
-			    } else {
-            console.log("STATUS NOT SUCCESS!");
-			    }
-		    }.bind(this),
-		    statusCode: {
-			    404: function() {
-            console.log("404 STATUS CODE");
-			    },
-			    500: function() {
-            console.log("500 STATUS CODE");
-			    }
-		    },
-		    error : function(e) {
-          console.log("ERROR STATUS CODE");
-		    }.bind(this)
-    	});
+      this.setState(
+        {
+          searchResults: this.props.index.search(query);
+        }
+      );
     } else {
        this.setState(
          {

@@ -23,7 +23,7 @@ export default class Input extends React.Component {
         e.keyCode != 37 && e.keyCode != 39
       ) {
         var input = e.target.value;
-        this.props.getSearchResults(input, true);
+        this.props.getSearchResults(input);
       } else {
         if(e.keyCode != 13)  {
           var suggestionsContainer = $(".suggestionGroupClass");
@@ -91,14 +91,14 @@ export default class Input extends React.Component {
      * Bound to the onBlur event (when the use clicks outside of the field)
      */
     focusOut() {
-      this.props.getSearchResults('', true);
+      this.props.getSearchResults('');
     }
 
     /**
      * Bound to the onFocus event (when the use clicks in of the field)
      */
     onFocus(e) {
-      this.props.getSearchResults(e.target.value, true);
+      this.props.getSearchResults(e.target.value);
     }
 
     render() {
