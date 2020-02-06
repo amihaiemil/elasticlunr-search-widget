@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 9
+- 10
 cache:
   directories:
   - node_modules
@@ -8,7 +8,7 @@ before_install:
 - npm install npm@latest -g
 - npm install webpack@latest -g
 - npm -v
-- webpack --version
+# - webpack --version
 - npm install
 script:
 - NODE_ENV=production webpack
