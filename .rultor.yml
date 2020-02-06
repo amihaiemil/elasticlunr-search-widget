@@ -17,7 +17,7 @@ merge:
     NODE_ENV=production ./node_modules/.bin/webpack
 deploy:
   script: |-
-    NODE_ENV=production ./node_modules/.bin/webpack
+    # NODE_ENV=production ./node_modules/.bin/webpack
     chmod +x ./deploy.sh
     ./deploy.sh
 release:
