@@ -103,18 +103,18 @@ export default class Input extends React.Component {
 
     render() {
       return (
-        <div id="charles-search-wrapper">
-          <div id="charles-search-input-wrapper">
+        <div id="elnr-sw-wrapper">
+          <div id="elnr-sw-input-wrapper">
           {
             this.state.keywords.length == 0 ?
               <input
-                id="charles-search-field" placeholder={this.props.placeholder}
+                id="elnr-sw-search-field" placeholder={this.props.placeholder}
                 onKeyUp={this.handleKeyUp.bind(this)}
                 onChange={this.handleChange.bind(this)}
                 autoComplete="off"
               />
             :
-              <input id="charles-search-field" value={this.state.keywords}
+              <input id="elnr-sw-search-field" value={this.state.keywords}
                 onKeyUp={this.handleKeyUp.bind(this)}
                 onChange={this.handleChange.bind(this)}
                 onFocus={this.onFocus.bind(this)}

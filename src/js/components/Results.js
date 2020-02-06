@@ -13,7 +13,7 @@ var $ = require('jquery');
 class Results extends React.Component {
 
   onOutsideEvent = (event) => {
-    if(event.target.id != 'charles-search-field') {
+    if(event.target.id != 'elnr-sw-search-field') {
      this.props.getSearchResults("");
     }
   }

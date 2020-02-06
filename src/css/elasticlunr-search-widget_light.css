@@ -9,38 +9,25 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-#charles-search {
+#elasticlunr-search-widget {
     width: 250px;
     font-family: 'Raleway', sans-serif;
     position: absolute;
 }
 
-/**
- * Display the search widget only on screen width > 450px;
- */
-/*
-#charles-search {
-    display: none;
-}
-@media only screen and (min-width: 450px) {
-  #charles-search {
-      display: block;
-  }
-}*/
-
 /***********************
 *        INPUT         *
 ************************/
 
-#charles-search-wrapper {
+#elnr-sw-wrapper {
     width: 100%;
     position: relative;
     z-index: 100;
 }
-#charles-search-input-wrapper {
+#elnr-sw-input-wrapper {
     position: relative;
 }
-#charles-search-input-wrapper::before {
+#elnr-sw-input-wrapper::before {
     content: '';
     display: inline-block;
     width: 15px;
@@ -51,7 +38,7 @@
     left: 5%
 }
 
-#charles-search-field {
+#elnr-sw-search-field {
     width: 100%;
     border: solid #979797 1px;
     padding: 12px 10px 10px 35px;
@@ -67,19 +54,19 @@
             box-sizing: border-box;
 }
 
-#charles-search-field::-webkit-input-placeholder {
+#elnr-sw-search-field::-webkit-input-placeholder {
     font-family: 'Raleway', sans-serif;
 }
 
-#charles-search-field::-moz-placeholder {
+#elnr-sw-search-field::-moz-placeholder {
     font-family: 'Raleway', sans-serif;
 }
 
-#charles-search-field:-ms-input-placeholder {
+#elnr-sw-search-field:-ms-input-placeholder {
     font-family: 'Raleway', sans-serif;
 }
 
-#charles-search-field:-moz-placeholder {
+#elnr-sw-search-field:-moz-placeholder {
     font-family: 'Raleway', sans-serif;
 }
 
