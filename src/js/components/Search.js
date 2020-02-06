@@ -28,7 +28,7 @@ export default class Search extends React.Component {
     if(query.length >= 3) {
       this.setState(
         {
-          searchResults: this.props.index.search(query);
+          searchResults: this.props.index.search(query)
         }
       );
     } else {
