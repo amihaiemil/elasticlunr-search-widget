@@ -26,9 +26,12 @@ export default class Search extends React.Component {
    */
   getSearchResults(query) {
     if(query.length >= 3) {
+	  console.log("Searching ElasticLunr index for query: " + query);
+	  var res = index.search(query);
+	  console.log("Results: " + res);
       this.setState(
         {
-          searchResults: this.props.index.search(query)
+          searchResults: res
         }
       );
     } else {

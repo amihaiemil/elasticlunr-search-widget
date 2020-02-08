@@ -46,10 +46,6 @@ class Results extends React.Component {
                 )
               }
           </div>
-          // <PageNumbers
-          //   getSearchResults={this.props.getSearchResults}
-          //   results={this.props.searchResults} id="paginator" key="paginator"
-          // />
         </div>
           : null
     );

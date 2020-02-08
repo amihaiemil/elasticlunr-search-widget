@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 import Search from "./components/Search";
 var $ = require('jquery');
 
-var index = $('script[id=elnr-sw-script]').attr('index');
 var size = $('script[id=elnr-sw-script]').attr('size');
 var placeholder = $('script[id=elnr-sw-script]').attr('placeholder');
 if(!size) {
@@ -13,9 +12,14 @@ if(!size) {
 if(!placeholder) {
   placeholder = "Enter keywords...";
 }
-if(index) {
+if(index === undefined || index == null) { //The ElasticLunr index has to be present in the Document.
+  console.error(
+    "elasticlunr-search-widget.min.js: Please specify the ElasticLunr index!"
+  );
+  console.error("Variable index (ElasticLunr) should be present on the page");
+} else {
   $('head').append(
-    '<link href="https://www.amihaiemil.com/css/elasticlunr/elasticlunr-search-widget.css" type="text/css" rel="stylesheet"/>'
+    '<link href="https://www.amihaiemil.com/css/elasticlunr/elasticlunr-search-widget_light.css" type="text/css" rel="stylesheet"/>'
   )
   var divId = "elasticlunr-search-widget";
   var searchDiv = document.getElementById(divId);
@@ -25,11 +29,7 @@ if(index) {
       document.body.appendChild(searchDiv);
   }
   ReactDOM.render(
-    <Search index={index} placeholder={placeholder}/>,
+    <Search placeholder={placeholder}/>,
     searchDiv
-  );
-} else {
-  console.error(
-    "elasticlunr-search-widget.min.js: Please specify the ElasticLunr index!"
   );
 }
