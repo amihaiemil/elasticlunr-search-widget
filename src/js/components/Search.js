@@ -26,30 +26,28 @@ export default class Search extends React.Component {
    */
   getSearchResults(query) {
     if(query.length >= 3) {
-	  console.log("Searching ElasticLunr index for query: " + query);
-	  var res = index.search(
-	    query,
-		{
+	    var res = index.search(
+	      query,
+		    {
           fields: {
             title: {boost: 2, expand: true},
             preview: {boost: 1, expand: true}
           }
-		}
-	  );
-	  console.log("Results: " + res);
-	  
-	  //As the user types, search is performed at each key stroke and
-	  //searchResults is filled with results. If, at the next key-stroke, there
-	  //are no results, we should not override the previously found results.
-	  if(res.length == 0 && this.props.searchResults.length > 0) {
+		    }
+	    );
+
+	    //As the user types, search is performed at each key stroke and
+	    //searchResults is filled with results. If, at the next key-stroke, there
+	    //are no results, we should not override the previously found results.
+	    if(res.length == 0 && this.props.searchResults.length > 0) {
         return;
-	  } else {
-		  this.setState(
-          {
-            searchResults: res
-          }
-        );
-	  }
+	    } else {
+		    this.setState(
+            {
+              searchResults: res
+            }
+          );
+	    }
     } else {
        this.setState(
          {
