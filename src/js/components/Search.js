@@ -37,11 +37,19 @@ export default class Search extends React.Component {
 		}
 	  );
 	  console.log("Results: " + res);
-      this.setState(
-        {
-          searchResults: res
-        }
-      );
+	  
+	  //As the user types, search is performed at each key stroke and
+	  //searchResults is filled with results. If, at the next key-stroke, there
+	  //are no results, we should not override the previously found results.
+	  if(res.length == 0 && this.props.searchResults.length > 0) {
+        return;
+	  } else {
+		  this.setState(
+          {
+            searchResults: res
+          }
+        );
+	  }
     } else {
        this.setState(
          {
