@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>elasticlunr-search-widget</title>
+  </head>
+
+  <body>
+    <!--div where the widget is generated-->
+    <div id="elasticlunr-search-widget"></div>
+    <div class="main-container">
+      <p>Test page for the elasticlunr-search-widget. Some content is indexed and searched with ElasticLunr</p>
+    </div>
+	
+  <script
+   type="text/javascript"
+   id = "elasticlunr"
+   src="elasticlunr.min.js"> <!--ElasticLunr -->
+  </script>
+  <script> <!-- Index some posts for test-->
+    var index = elasticlunr(
+        function () {
+            this.addField('title');
+            this.addField('preview');
+            this.addField('link')
+            this.addField('date');
+            this.setRef('id');
+        }
+    );
+    var id = 0;
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Get A Mac For OpenSource",
+          "link": "https://www.amihaiemil.com/2020/02/03/get-a-mac-for-opensource.html",
+          "preview": "If you're working with opensource languages and technologies, you might find a Macbook more suitable than you think.",
+          "date": "2020-02-03 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Self-Protecting Projects",
+          "link": "https://www.amihaiemil.com/2020/01/17/self-protecting-projects.html",
+          "preview": "In order for a software product to be strong and of high quality, we should rely less on conventions and instead automate as many Quality Gates as possible.",
+          "date": "2020-01-17 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Hide It All!",
+          "link": "https://www.amihaiemil.com/2019/06/12/hide-it-all.html",
+          "preview": "Object orientation is not only about decoupling views and datasources from \"business logic\". It is about hiding every detail of implementation, including the JDK.",
+          "date": "2019-06-12 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "New Project Checklist",
+          "link": "https://www.amihaiemil.com/2019/05/12/new-project-checklist.html",
+          "preview": "A brief description of how I kick-start all my opensource projects.",
+          "date": "2019-05-12 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Polymorphic Input/Output Data",
+          "link": "https://www.amihaiemil.com/2019/03/31/polymorphic-input-output-data.html",
+          "preview": "Using polymorphism for input/output data, as an alternative to model classes",
+          "date": "2019-03-31 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Apache. Payara. Let's Encrypt.",
+          "link": "https://www.amihaiemil.com/2019/01/23/apache-payara-lets-encrypt.html",
+          "preview": "Using Apache and Let's Encrypt to automatically generate and renew SSL certificates for your Java EE platform.",
+          "date": "2019-01-23 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Builder As A (Fail-Fast) State Machine",
+          "link": "https://www.amihaiemil.com/2018/12/09/builder-as-a-failfast-state-machine.html",
+          "preview": "An elegant and \"fail-fast\" way of designing more complex Builder patterns.",
+          "date": "2018-12-09 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "An Extension To TellDontAsk",
+          "link": "https://www.amihaiemil.com/2018/11/10/an-extension-to-telldontask.html",
+          "preview": "I think that TellDontAsk is one of the most important principles out there, but it seems to be incomplete.",
+          "date": "2018-11-10 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Project Versioning With Rultor",
+          "link": "https://www.amihaiemil.com/2018/09/30/project-versioning-with-rultor.html",
+          "preview": "A brief explanation about how my projects are versioned.",
+          "date": "2018-09-30 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Who Is a Fullstack Developer?",
+          "link": "https://www.amihaiemil.com/2018/09/05/who-is-a-fullstack-developer.html",
+          "preview": "My thoughts on being a \"Fullstack Developer\".",
+          "date": "2018-09-05 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Logic Should Hide In Plain Sight",
+          "link": "https://www.amihaiemil.com/2018/07/22/logic-should-hide-in-plain-sight.html",
+          "preview": "If your objects are supposed to be alive and at the same time respect design principles and best practices, then the question \"Where is the business logic?\" arrises.",
+          "date": "2018-07-22 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "\"You mustn't be afraid to dream a little bigger, darling\"",
+          "link": "https://www.amihaiemil.com/2018/06/15/must-not-be-afraid-to-dream.html",
+          "preview": "To celebrate 2 years of this blog, I put together the most common comments and complaints of my readers, in a FAQ-like post.",
+          "date": "2018-06-15 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Dolls and Maquettes",
+          "link": "https://www.amihaiemil.com/2018/04/17/dolls-and-maquettes.html",
+          "preview": "Yet another metaphor about the harm that JavaBeans are causing in object oriented software.",
+          "date": "2018-04-17 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Java API For Docker",
+          "link": "https://www.amihaiemil.com/2018/03/10/java-api-for-docker.html",
+          "preview": "A proper, object oriented, Java library that encapsulates the calls to Docker's API.",
+          "date": "2018-03-10 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Teach Them The Language First",
+          "link": "https://www.amihaiemil.com/2018/01/24/teach-them-the-language-first.html",
+          "preview": "Before learning to work with a framework, a developer should first understand the basis of everything, the language and the ecosystem that is built around it.",
+          "date": "2018-01-24 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "My Take On Object Naming",
+          "link": "https://www.amihaiemil.com/2018/01/07/my-take-on-object-naming.html",
+          "preview": "My two cents on object naming.",
+          "date": "2018-01-07 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Invest in a Github Organization!",
+          "link": "https://www.amihaiemil.com/2017/11/29/invest-in-a-github-organization.html",
+          "preview": "I think that any software company which wants to keep up with the world has to be present on Github.",
+          "date": "2017-11-29 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "\"But how do you work without a model?\"",
+          "link": "https://www.amihaiemil.com/2017/11/04/but-how-do-you-work-without-a-model.html",
+          "preview": "This is the question that I get most of the times, when I tell people how I design my code and that I hate the concept of getter/setter model POJO.",
+          "date": "2017-11-04 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Jakarta EE 8: JsonCollectors And The OOP Alternative",
+          "link": "https://www.amihaiemil.com/2017/10/16/javaee8-jsoncollectors-oop-alternative.html",
+          "preview": "A short overview of Jakarta EE 8's JsonCollectors and an OOP alternative for JavaEE 7 and below.",
+          "date": "2017-10-16 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Let's Encrypt. Glassfish. AWS EC2.",
+          "link": "https://www.amihaiemil.com/2017/10/03/letsencrypt-glassfish-ec2.html",
+          "preview": "A guide on how to manually create a Let's Encrypt SSL certificate and install it on the Glassfish JavaEE platform, hosted on AWS EC2.",
+          "date": "2017-10-03 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Data Should Be Animated, Not Mapped",
+          "link": "https://www.amihaiemil.com/2017/09/01/data-should-be-animated-not-represented.html",
+          "preview": "In practical OOP, it is impossible to get rid of DTOs. However, we can improve the way we work with data - instead of mapping it to stale, dead object, we should animate it with live, smart objects.",
+          "date": "2017-09-01 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "How Interfaces Are Refactoring Our Code",
+          "link": "https://www.amihaiemil.com/2017/08/12/how-interfaces-are-refactoring-our-code.html",
+          "preview": "An example of why any object, in any application, should implement all its public methods from interfaces.",
+          "date": "2017-08-12 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Selenium With Headless Chrome On Travis CI",
+          "link": "https://www.amihaiemil.com/2017/07/14/selenium-headless-chrome-travis.html",
+          "preview": "How to run Selenium tests with Google Chrome Headless on Travis CI.",
+          "date": "2017-07-14 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Yasson: Yet Another POJO Parser",
+          "link": "https://www.amihaiemil.com/2017/07/04/yasson-yet-another-POJO-parser.html",
+          "preview": "Yasson is the reference implementation of JSON-B and, unfortunately, version 1.0 relies on POJOs' get/set design",
+          "date": "2017-07-04 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Non flushable javax.json.JsonObjectBuilder",
+          "link": "https://www.amihaiemil.com/2017/06/14/non-flushable-jsonobjectbuilder.html",
+          "preview": "Working around flushable javax.json.JsonObjectBuilder",
+          "date": "2017-06-14 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Meet Charles Michael",
+          "link": "https://www.amihaiemil.com/2017/05/23/meet-charles-michael.html",
+          "preview": "A Github chatbot for indexing and searching gh-pages websites",
+          "date": "2017-05-23 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Test Driven Rest",
+          "link": "https://www.amihaiemil.com/2017/05/03/test-driven-rest.html",
+          "preview": "Using tests to make sure that your REST api is navigable",
+          "date": "2017-05-03 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "The Remote Dream",
+          "link": "https://www.amihaiemil.com/2017/04/05/the-remote-dream.html",
+          "preview": "A brief explanation of what I understand by the words \"remote work\"",
+          "date": "2017-04-05 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Puzzles And Open Source",
+          "link": "https://www.amihaiemil.com/2017/03/22/puzzles-and-open-source.html",
+          "preview": "An overview of how we developed an opensource Java library using PDD",
+          "date": "2017-03-22 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Always Use a CMS For The Client Side",
+          "link": "https://www.amihaiemil.com/2017/03/13/cms-for-clientside.html",
+          "preview": "For any webapp, no matter its technology, all the client-side content has to be managed using a CMS (down to line-of-code level)",
+          "date": "2017-03-13 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Each System Property Should Have Its Own Class",
+          "link": "https://www.amihaiemil.com/2017/02/24/each-system-property-a-class.html",
+          "preview": "Each System.getProperty(\"...\") should be in its own class. Otherwise, the code containing it is not testable.",
+          "date": "2017-02-24 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Tunnel Decorators",
+          "link": "https://www.amihaiemil.com/2017/02/18/decorators-with-tunnels.html",
+          "preview": "Using decorators to encapsulate the work with a badly designed library.",
+          "date": "2017-02-18 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Github: Automatically Deploy Files From One Repo to Another",
+          "link": "https://www.amihaiemil.com/2017/02/13/github-automatically-deploy-files-from-one-repo-to-another.html",
+          "preview": "A simple guide to help you with automatically moving files from one repo to another, using Rultor",
+          "date": "2017-02-13 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Selenium and JUnit, the right way!",
+          "link": "https://www.amihaiemil.com/2017/01/24/selenium-and-junit-the-right-way.html",
+          "preview": "Are you writing Selenium tests with JUnit? If you are not a good OOP programmer, you're probably doing it wrong.",
+          "date": "2017-01-24 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Becoming a contributor",
+          "link": "https://www.amihaiemil.com/2016/12/30/becoming-a-contributor.html",
+          "preview": "How we should work together using PDD, plus other details",
+          "date": "2016-12-30 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Contributors wanted",
+          "link": "https://www.amihaiemil.com/2016/12/22/contributors-wanted.html",
+          "preview": "A chance to practice pure oop while contributing to fun projects!",
+          "date": "2016-12-22 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Project Charles",
+          "link": "https://www.amihaiemil.com/2016/12/05/project-charles.html",
+          "preview": "A simple and smart Java webcrawler.",
+          "date": "2016-12-05 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Using Google Recaptcha 2 with JAX-RS",
+          "link": "https://www.amihaiemil.com/2016/06/03/using-google-recaptha-with-jax-rs.html",
+          "preview": "How to secure a form post with Google ReCaptcha 2",
+          "date": "2016-06-03 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Calculate time using javascript",
+          "link": "https://www.amihaiemil.com/2016/05/24/calculate-time-with-javascript.html",
+          "preview": "Useful javascript code.",
+          "date": "2016-05-24 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "What is HATEOAS?",
+          "link": "https://www.amihaiemil.com/2016/05/07/what-is-hateoas.html",
+          "preview": "You can implement web services using a single HTTP method and nothing else, or you can make use of all the power that HTTP gives you (different methods, status codes, mime-types etc) to make your services truly RESTful.",
+          "date": "2016-05-07 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Project Eva",
+          "link": "https://www.amihaiemil.com/2016/04/20/project-eva.html",
+          "preview": "A simple AI framework which you can use to solve complicated problems.",
+          "date": "2016-04-20 00:00:00 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+        var postToIndex = {
+          "id": id++,
+          "title": "Hello world!",
+          "link": "https://www.amihaiemil.com/2016/04/09/hello-world.html",
+          "preview": "First post!",
+          "date": "2016-04-09 20:20:27 +0000"
+        }
+        index.addDoc(postToIndex);
+    
+    </script>
+
+  <script
+   type="text/javascript"
+   id = "elnr-sw-script"
+   size="5"
+   src="../elasticlunr-search-widget.min.js"> <!--ElasticLunr Search Widget-->
+  </script>
+  
+  </body>
+</html>
