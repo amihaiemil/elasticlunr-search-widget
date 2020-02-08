@@ -4,15 +4,12 @@ docker:
   as_root: true
 install: |-
   sudo apt-get update
-  whereis npm
   curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-  sudo apt-get install -y nodejs
-  sudo apt-get install jq
+  sudo apt-get install -y nodejs                                     # Install Node
+  sudo apt-get install jq                                            # For JSON cli parsing.
   node --version
   npm --version
-  # npm install npm@latest -g
-  # npm install webpack@latest -g
-  # ./node_modules/.bin/webpack --version
+  npm install
 decrypt:
   deployment.txt: "repo/dcfg/deployment.txt.asc"
 merge:
