@@ -14,7 +14,7 @@ export default class SearchResult extends React.Component {
         <div
           className="search-result-text"
           dangerouslySetInnerHTML={
-            { __html: " ... " + this.props.text + " ..."}
+            { __html: this.props.text}
           }></div>
       </div>
     );

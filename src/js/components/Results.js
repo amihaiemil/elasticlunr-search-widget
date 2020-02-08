@@ -29,7 +29,7 @@ class Results extends React.Component {
             key={"search-result-" + i}
             link={resArray[i].doc.link}
             title={resArray[i].doc.title}
-            text={resArray[i].doc.highlight}
+            text={resArray[i].doc.preview}
           />
         );
       }
