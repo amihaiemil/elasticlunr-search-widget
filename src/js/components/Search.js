@@ -20,6 +20,21 @@ export default class Search extends React.Component {
     };
   }
 
+  buildPagesMatrix(results) {
+    var pages = [];
+    var page = -1;
+
+    for (i = 0; i < results.length; i++) {
+        if (i % this.props.size === 0) {
+            pages[++page] = [];
+        }
+
+        pages[page].push(results[i]);
+    }
+
+    return pages;
+  }
+
   /**
    * Search the ElasticLunr index.
    * @param query - String; Search query.
@@ -42,9 +57,23 @@ export default class Search extends React.Component {
 	    if(res.length == 0 && this.props.searchResults.length > 0) {
         return;
 	    } else {
+        var pageSize = this.props.size;
 		    this.setState(
             {
-              searchResults: res
+              searchResults: (function () {
+                var pages = [];
+                var page = -1;
+
+                for (var i = 0; i < res.length; i++) {
+                    if (i % pageSize === 0) {
+                        pages[++page] = [];
+                    }
+
+                    pages[page].push(res[i]);
+                }
+
+                return pages;
+              })()
             }
           );
 	    }

@@ -29,7 +29,7 @@ if(index === undefined || index == null) { //The ElasticLunr index has to be pre
       document.body.appendChild(searchDiv);
   }
   ReactDOM.render(
-    <Search placeholder={placeholder}/>,
+    <Search placeholder={placeholder} size={size}/>,
     searchDiv
   );
 }

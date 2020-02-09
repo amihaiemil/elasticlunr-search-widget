@@ -20,6 +20,7 @@ class Results extends React.Component {
 
   render() {
     var resArray = this.props.searchResults;
+    console.log(resArray);
     var resultsDivs = [];
     if(resArray) {
       for (var i = 0; i < resArray.length; i++) {
