@@ -19,18 +19,17 @@ class Results extends React.Component {
   }
 
   render() {
-    var resArray = this.props.searchResults;
-    console.log(resArray);
+    var firstPage = this.props.searchResults[0];
     var resultsDivs = [];
-    if(resArray) {
-      for (var i = 0; i < resArray.length; i++) {
+    if(firstPage) {
+      for (var i = 0; i < firstPage.length; i++) {
         resultsDivs.push(
           <SearchResult
             id={"search-result-" + i}
             key={"search-result-" + i}
-            link={resArray[i].doc.link}
-            title={resArray[i].doc.title}
-            text={resArray[i].doc.preview}
+            link={firstPage[i].doc.link}
+            title={firstPage[i].doc.title}
+            text={firstPage[i].doc.preview}
           />
         );
       }
