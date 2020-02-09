@@ -31,15 +31,22 @@ class Results extends React.Component {
     );
   }
 
+  /*
+     If the user clicks outside of the Results list,
+     elsewhere than the Input field, then the results
+     list should hide (i.e. make an "empty" search).
+  */
   onOutsideEvent = (event) => {
     if(event.target.id != 'elnr-sw-search-field') {
-     this.props.getSearchResults("");
+      this.props.getSearchResults("");
     }
   }
 
   render() {
     var currentPageIndex = this.state.selectedPage;
+    console.log("Current page index: " + currentPageIndex);
     var currentPage = this.props.searchResults[currentPageIndex];
+    console.log("Current page: " + currentPage);
     var resultsDivs = [];
     if(currentPage) {
       for (var i = 0; i < currentPage.length; i++) {

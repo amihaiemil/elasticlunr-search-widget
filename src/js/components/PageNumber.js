@@ -14,11 +14,11 @@ export default class PageNumber extends React.Component {
   render() {
     return (
         this.props.selected ?
-        <li onClick={this.handleClick.bind(this)} className={"search-page selected"} id={this.props.id} key={this.props.key}>
+        <li onMouseUp={this.handleClick.bind(this)} className={"search-page selected"} id={this.props.id} key={this.props.key}>
           {this.props.label}
         </li>
         :
-        <li onClick={this.handleClick.bind(this)} className={"search-page"} id={this.props.id} key={this.props.key}>
+        <li onMouseUp={this.handleClick.bind(this)} className={"search-page"} id={this.props.id} key={this.props.key}>
           {this.props.label}
         </li>
     );
