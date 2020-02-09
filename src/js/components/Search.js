@@ -20,21 +20,6 @@ export default class Search extends React.Component {
     };
   }
 
-  buildPagesMatrix(results) {
-    var pages = [];
-    var page = -1;
-
-    for (i = 0; i < results.length; i++) {
-        if (i % this.props.size === 0) {
-            pages[++page] = [];
-        }
-
-        pages[page].push(results[i]);
-    }
-
-    return pages;
-  }
-
   /**
    * Search the ElasticLunr index.
    * @param query - String; Search query.
@@ -60,6 +45,7 @@ export default class Search extends React.Component {
         var pageSize = this.props.size;
 		    this.setState(
             {
+              //"paginate" the results; put them in a "pages" matrix;
               searchResults: (function () {
                 var pages = [];
                 var page = -1;

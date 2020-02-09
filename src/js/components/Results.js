@@ -12,6 +12,25 @@ var $ = require('jquery');
  */
 class Results extends React.Component {
 
+
+  /**
+   * State of this search component.
+   */
+  constructor() {
+    super();
+    this.state = {
+      selectedPage: 0
+    };
+  }
+
+  selectPage(number) {
+    this.setState(
+      {
+        selectedPage: number
+      }
+    );
+  }
+
   onOutsideEvent = (event) => {
     if(event.target.id != 'elnr-sw-search-field') {
      this.props.getSearchResults("");
@@ -19,17 +38,18 @@ class Results extends React.Component {
   }
 
   render() {
-    var firstPage = this.props.searchResults[0];
+    var currentPageIndex = this.state.selectedPage;
+    var currentPage = this.props.searchResults[currentPageIndex];
     var resultsDivs = [];
-    if(firstPage) {
-      for (var i = 0; i < firstPage.length; i++) {
+    if(currentPage) {
+      for (var i = 0; i < currentPage.length; i++) {
         resultsDivs.push(
           <SearchResult
             id={"search-result-" + i}
             key={"search-result-" + i}
-            link={firstPage[i].doc.link}
-            title={firstPage[i].doc.title}
-            text={firstPage[i].doc.preview}
+            link={currentPage[i].doc.link}
+            title={currentPage[i].doc.title}
+            text={currentPage[i].doc.preview}
           />
         );
       }
@@ -46,6 +66,13 @@ class Results extends React.Component {
                 )
               }
           </div>
+          <PageNumbers
+            searchResults={this.props.searchResults}
+            selectedPage={this.state.selectedPage}
+            selectPage={this.selectPage.bind(this)}
+            id="paginator"
+            key="paginator"
+          />
         </div>
           : null
     );
