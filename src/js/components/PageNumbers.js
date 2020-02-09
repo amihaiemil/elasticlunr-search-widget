@@ -9,10 +9,9 @@ import PageNumber from "./PageNumber";
 export default class PageNumbers extends React.Component {
 
   render() {
+    var buttonsList = []
     //render only if we have more than 1 page
     if(this.props.searchResults.length > 1) {
-      var buttonsList = []
-
       /*
           if we are on the second page or higher,
           display the "previous page" arrow
@@ -45,7 +44,7 @@ export default class PageNumbers extends React.Component {
       }
 
       /*
-          if we not on the last page,
+          if we are not on the last page,
           display the "next page" arrow
       */
       if (this.props.selectedPage < this.props.searchResults.length - 1) {
