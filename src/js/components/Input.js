@@ -85,6 +85,9 @@ export default class Input extends React.Component {
           keywords: e.target.value
         }
       );
+      //when the keywords are changing, we set the first page of results to be
+      //displayed.
+      this.props.selectPage(0);
     }
 
     /**
@@ -99,6 +102,8 @@ export default class Input extends React.Component {
      */
     onFocus(e) {
       this.props.getSearchResults(e.target.value);
+      this.props.selectPage(this.props.selectedPage);//useless call here,
+      //since the page is already selected, but it's clearer like this.
     }
 
     render() {

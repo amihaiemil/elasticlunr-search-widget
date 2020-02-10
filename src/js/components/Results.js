@@ -12,25 +12,6 @@ var $ = require('jquery');
  */
 class Results extends React.Component {
 
-
-  /**
-   * State of this search component.
-   */
-  constructor() {
-    super();
-    this.state = {
-      selectedPage: 0
-    };
-  }
-
-  selectPage(number) {
-    this.setState(
-      {
-        selectedPage: number
-      }
-    );
-  }
-
   /*
      If the user clicks outside of the Results list,
      elsewhere than the Input field, then the results
@@ -43,7 +24,7 @@ class Results extends React.Component {
   }
 
   render() {
-    var currentPageIndex = this.state.selectedPage;
+    var currentPageIndex = this.props.selectedPage;
     console.log("Current page index: " + currentPageIndex);
     var currentPage = this.props.searchResults[currentPageIndex];
     console.log("Current page: " + currentPage);
@@ -75,8 +56,8 @@ class Results extends React.Component {
           </div>
           <PageNumbers
             searchResults={this.props.searchResults}
-            selectedPage={this.state.selectedPage}
-            selectPage={this.selectPage.bind(this)}
+            selectedPage={this.props.selectedPage}
+            selectPage={this.props.selectPage}
             id="paginator"
             key="paginator"
           />

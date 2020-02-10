@@ -16,7 +16,8 @@ export default class Search extends React.Component {
     super();
     this.state = {
       keywords: "",
-      searchResults: []
+      searchResults: [],
+      selectedPage: 0
     };
   }
 
@@ -72,16 +73,39 @@ export default class Search extends React.Component {
     }
   }
 
+  /**
+   * Select a page to be displayed.
+   * @param selectedPage - Which of the results page should be displayed?
+   *  Most of the times this value will be 0 (the first page), but there
+   *  are also cases when we need to display another page -- for instance,
+   *  if the user types some keywords, then he clicks (focus out) out of the
+   *  Search component (we hide the results List), and then he clicks again
+   *  on the Input field (focusIn): in this case the search is performed
+   *  again, automatically, with the text that is already typed in the field,
+   *  so we need to display the page where the user left from.
+   */
+  selectPage(selectedPage) {
+    this.setState(
+      {
+        selectedPage: selectedPage
+      }
+    );
+  }
+
   render() {
     return (
       <div>
         <Input
           placeholder={this.props.placeholder}
           getSearchResults={this.getSearchResults.bind(this)}
+          selectedPage={this.state.selectedPage}
+          selectPage={this.selectPage.bind(this)}
         />
         <Results
           searchResults={this.state.searchResults}
+          selectedPage={this.state.selectedPage}
           getSearchResults={this.getSearchResults.bind(this)}
+          selectPage={this.selectPage.bind(this)}
         />
       </div>
     );
