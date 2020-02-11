@@ -46,7 +46,26 @@ var index = elasticlunr(
 );
 ```
 
-The format is important because that's how the search results will be returned and handled by the widget. Here is how the Search Results  look (it's a Json Array):
+The format is important because that's how the search results will be returned and handled by the widget.
+
+## Query format
+
+You only type some words in the Input field and, behind the scenes, this query is performed:
+
+```javascript
+var results = index.search(
+    keywords,
+    {
+        fields: {
+            title: {boost: 3, expand: true},
+            content: {boost: 2, expand: true},
+            preview: {boost: 1, expand: true}
+        }
+    }
+);
+```
+
+Here is how the Search Results look (it's a Json Array):
 
 ```javascript
 [
