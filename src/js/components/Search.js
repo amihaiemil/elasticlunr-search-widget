@@ -31,8 +31,9 @@ export default class Search extends React.Component {
 	      query,
 		    {
           fields: {
-            title: {boost: 2, expand: true},
-            preview: {boost: 1, expand: true}
+            title: {boost: 3, expand: true},
+	    content: {boost: 2, expand: true},
+	    preview: {boost: 1, expand: true}
           }
 		    }
 	    );
