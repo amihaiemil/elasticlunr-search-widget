@@ -93,7 +93,7 @@ At the moment, the widget takes the following parameter that can offer some cust
 
 ## Issues and Feature Requests
 
-Feel free to open an Issues or Feature Requests and we will try to help asap. We also gladly accept Pull Requests. For instance, one of the next steps in the development of this widget is to let the user specify their custom index format and query type.
+Feel free to open any Issues or Feature Requests and we will try to help asap. **We gladly accept Pull Requests.** For instance, one of the next steps in the development of this widget is to let the user specify their custom index format and query type.
 
 ## Build
 After you take down the project, simply go in its root folder and run the following commands
