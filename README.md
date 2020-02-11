@@ -7,7 +7,7 @@ Search Widget for [ElasticLunr.js](http://elasticlunr.com/) (https://github.com/
 
 It will call ``index.search(...)`` as the user types and display the results in a paginated manner.
 
-# How To Use It
+## How To Use It
 
 Add the following script to your page:
 
@@ -29,7 +29,7 @@ If you are having trouble getting it to run, look under [src/test](https://githu
 
 See a live example of the widget here: https://amihaiemil.com
 
-# Index Format
+## Index Format
 
 When you create the ElasticLunr index, as explained [here](http://elasticlunr.com/), make sure to give it the following format:
 
@@ -65,18 +65,18 @@ The format is important because that's how the search results will be returned a
 ]
 ```
 
-# Customization
+## Customization
 
 At the moment, the widget takes the following parameter that can offer some customization.
 
   * **Size** of the page customizable with the "size" parameter -- defaults to 3
   * **Placeholder** of the input field customizable with the "placeholder" parameter -- defaults to "Search as you type..."
 
-# Issues and Feature Requests
+## Issues and Feature Requests
 
 Feel free to open an Issues or Feature Requests and we will try to help asap. We also gladly accept Pull Requests. For instance, one of the next steps in the development of this widget is to let the user specify their custom index format and query type.
 
-# Build
+## Build
 After you take down the project, simply go in its root folder and run the following commands
 
 ```shell
