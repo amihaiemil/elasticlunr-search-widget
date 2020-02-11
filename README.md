@@ -7,6 +7,8 @@ Search Widget for [ElasticLunr.js](http://elasticlunr.com/) (https://github.com/
 
 It will call ``index.search(...)`` as the user types and display the results in a paginated manner.
 
+<img src="https://amihaiemil.com/images/el-sw.PNG"/>
+
 ## How To Use It
 
 Add the following script to your page:
