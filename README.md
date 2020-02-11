@@ -17,11 +17,17 @@ Add the following script to your page:
     id = "elnr-sw-script"
     size="3"                       <!--Optional, defaults to 3-->
     placeholder="Enter keywords"   <!--Optional, defaults to "Enter keywords..."-->
-    src="/js/elasticlunr/elasticlunr-search-widget.min.js"> <!--ElasticLunr Search Widget-->
+    src="https://amihaiemil.com/js/elasticlunr/elasticlunr-search-widget.min.js"> <!--Latest ElasticLunr search widget-->
 </script>
 ```
 
 Make sure to add it **after** the ``<script>`` where you are creating the ElasticLunr ``index``. The Index has to be in the variable ``index``, which the widget calls internally. Otherwise, you will get an error.
+
+The script will render the whole widget in a div with id ``elasticlunr-search-widget``. If the div is not present on the page, it will create and place it right after the script tag - you will probably have to write a little CSS to position the div on the page.
+
+If you are having trouble getting it to run, look under [src/test](https://github.com/amihaiemil/elasticlunr-search-widget/tree/master/src/test) to find an ``index.html`` for test. Look inside it to see how ElasticLunr is imported, index is created and finally this Search Widget is imported last.
+
+See a live example of the widget here: https://amihaiemil.com
 
 # Index Format
 
@@ -57,4 +63,23 @@ The format is important because that's how the search results will be returned a
           }
      }
 ]
+```
+
+# Customization
+
+At the moment, the widget takes the following parameter that can offer some customization.
+
+  * **Size** of the page customizable with the "size" parameter -- defaults to 3
+  * **Placeholder** of the input field customizable with the "placeholder" parameter -- defaults to "Search as you type..."
+
+# Issues and Feature Requests
+
+Feel free to open an Issues or Feature Requests and we will try to help asap. We also gladly accept Pull Requests. For instance, one of the next steps in the development of this widget is to let the user specify their custom index format and query type.
+
+# Build
+After you take down the project, simply go in its root folder and run the following commands
+
+```shell
+$ npm install
+$ ./node_modules/.bin/webpack
 ```
