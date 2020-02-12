@@ -27,7 +27,7 @@ Make sure to add it **after** the ``<script>`` where you are creating the Elasti
 
 The script will render the whole widget in a div with id ``elasticlunr-search-widget``. If the div is not present on the page, it will create and place it right after the script tag - you will probably have to write a little CSS to position the div on the page.
 
-If you are having trouble getting it to run, look under [src/test](https://github.com/amihaiemil/elasticlunr-search-widget/tree/master/src/test) to find an ``index.html`` for test. Look inside it to see how ElasticLunr is imported, index is created and finally this Search Widget is imported last.
+If you are having trouble getting it to run, look under [src/test](https://github.com/amihaiemil/elasticlunr-search-widget/tree/master/src/test) to find an ``index.html`` for test. Look inside it to see how ElasticLunr is imported, index is created and finally this Search Widget is imported last. Pay attention, the build under ``src/test`` is not necessarily the latest.
 
 See a live example of the widget here: https://amihaiemil.com
 
