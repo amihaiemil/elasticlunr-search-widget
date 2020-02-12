@@ -28,7 +28,6 @@ export default class Input extends React.Component {
         if(e.keyCode != 13)  {
           var suggestionsContainer = $(".suggestionGroupClass");
           if(suggestionsContainer != null) {//if we don't have some suggestions displayed, it makes no sense to go further
-            //console.log(e.keyCode);
             switch (e.keyCode) {
               case 38://up arrow pressed
                 var activeItem = suggestionsContainer.find('.active-result');
