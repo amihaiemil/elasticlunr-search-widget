@@ -25,9 +25,7 @@ class Results extends React.Component {
 
   render() {
     var currentPageIndex = this.props.selectedPage;
-    console.log("Current page index: " + currentPageIndex);
     var currentPage = this.props.searchResults[currentPageIndex];
-    console.log("Current page: " + currentPage);
     var resultsDivs = [];
     if(currentPage) {
       for (var i = 0; i < currentPage.length; i++) {
