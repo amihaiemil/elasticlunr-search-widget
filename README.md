@@ -91,7 +91,7 @@ Here is how the Search Results look (it's a Json Array):
 At the moment, the widget takes the following parameter that can offer some customization.
 
   * **Size** of the page customizable with the "size" parameter -- defaults to 3
-  * **Placeholder** of the input field customizable with the "placeholder" parameter -- defaults to "Search as you type..."
+  * **Placeholder** of the input field customizable with the "placeholder" parameter -- defaults to "Enter keywords..."
 
 ## Issues and Feature Requests
 
