@@ -23,5 +23,11 @@ curl -H "Authorization: token ${TOKEN}" -X PUT -d @build.txt https://api.github.
 # deploy the css file elasticlunr-search-widget_light.css
 SHA_CSS_LIGHT=$(curl 'https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/css/elasticlunr/elasticlunr-search-widget_light.css' | jq '.sha')
 NEW_LIGHT_CSS=$(openssl enc -base64 <<< $(cat src/css/elasticlunr-search-widget_light.css) | awk 'BEGIN{ORS="\\n";} {print}')
-echo "{\"message\": \"deploy css light\", \"sha\": ${SHA_CSS_LIGHT}, \"content\": \"${NEW_LIGHT_CSS}\"}" > css_light.txt
+echo "{\"message\": \"deploy light css\", \"sha\": ${SHA_CSS_LIGHT}, \"content\": \"${NEW_LIGHT_CSS}\"}" > css_light.txt
 curl -H "Authorization: token ${TOKEN}" -X PUT -d @css_light.txt https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/css/elasticlunr/elasticlunr-search-widget_light.css
+
+# deploy the css file elasticlunr-search-widget_dark.css
+SHA_CSS_DARK=$(curl 'https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/css/elasticlunr/elasticlunr-search-widget_dark.css' | jq '.sha')
+NEW_DARK_CSS=$(openssl enc -base64 <<< $(cat src/css/elasticlunr-search-widget_dark.css) | awk 'BEGIN{ORS="\\n";} {print}')
+echo "{\"message\": \"deploy dark css\", \"sha\": ${SHA_CSS_DARK}, \"content\": \"${NEW_DARK_CSS}\"}" > css_dark.txt
+curl -H "Authorization: token ${TOKEN}" -X PUT -d @css_dark.txt https://api.github.com/repos/amihaiemil/amihaiemil.github.io/contents/css/elasticlunr/elasticlunr-search-widget_dark.css
