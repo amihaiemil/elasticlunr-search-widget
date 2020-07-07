@@ -6,6 +6,7 @@ var $ = require('jquery');
 
 var size = $('script[id=elnr-sw-script]').attr('size');
 var placeholder = $('script[id=elnr-sw-script]').attr('placeholder');
+var theme = $('script[id=elnr-sw-script]').attr('theme');
 if(!size) {
   size = 3;
 }
@@ -18,9 +19,15 @@ if(index === undefined || index == null) { //The ElasticLunr index has to be pre
   );
   console.error("Variable index (ElasticLunr) should be present on the page");
 } else {
-  $('head').append(
-    '<link href="https://www.amihaiemil.com/css/elasticlunr/elasticlunr-search-widget_light.css" type="text/css" rel="stylesheet"/>'
-  )
+  if (theme === "dark") {
+    $('head').append(
+      '<link href="https://www.amihaiemil.com/css/elasticlunr/elasticlunr-search-widget_dark.css" type="text/css" rel="stylesheet"/>'
+    )
+  } else {
+    $('head').append(
+      '<link href="https://www.amihaiemil.com/css/elasticlunr/elasticlunr-search-widget_light.css" type="text/css" rel="stylesheet"/>'
+    )
+  }
   var divId = "elasticlunr-search-widget";
   var searchDiv = document.getElementById(divId);
   if(searchDiv == null) { //if the div doesn't exist, create it.
