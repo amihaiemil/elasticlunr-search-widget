@@ -19,6 +19,7 @@ Add the following script to your page:
     id = "elnr-sw-script"
     size="3"                       <!--Optional, defaults to 3-->
     placeholder="Enter keywords"   <!--Optional, defaults to "Enter keywords..."-->
+    theme="dark"                   <!--Optional, defaults to the light theme-->
     src="https://amihaiemil.com/js/elasticlunr/elasticlunr-search-widget.min.js"> <!--Latest ElasticLunr search widget-->
 </script>
 ```
@@ -93,7 +94,7 @@ At the moment, the widget takes the following parameter that can offer some cust
   * **Size** of the page customizable with the "size" parameter -- defaults to 3
   * **Placeholder** of the input field customizable with the "placeholder" parameter -- defaults to "Enter keywords..."
   * **Theme** of the widget. By default, it has a light theme. With the "theme" parameter set to "dark" you will get
-  the dark theme. More details [here](https://github.com/amihaiemil/elasticlunr-search-widget/pull/25).
+  the dark theme.
 
 ## Issues and Feature Requests
 
