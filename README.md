@@ -92,6 +92,8 @@ At the moment, the widget takes the following parameter that can offer some cust
 
   * **Size** of the page customizable with the "size" parameter -- defaults to 3
   * **Placeholder** of the input field customizable with the "placeholder" parameter -- defaults to "Enter keywords..."
+  * **Theme** of the widget. By default, it has a light theme. With the "theme" parameter set to "dark" you will get
+  the dark theme. More details [here](https://github.com/amihaiemil/elasticlunr-search-widget/pull/25).
 
 ## Issues and Feature Requests
 
